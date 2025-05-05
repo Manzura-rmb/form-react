@@ -1,0 +1,41 @@
+@mixin dflex {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+form{
+    width: 500px;
+    background-color: aliceblue;
+    padding: 30px;
+    .title{
+        @include dflex();
+        padding: 20px;
+        img {
+            width: 90px;
+            height: 70px;
+        }
+        h1 {
+            padding: 20px;
+        }
+    }
+    h2 {
+        background-color: rgb(135, 231, 200);
+        padding: 20px;
+        text-align: center;
+    }
+    .inputs{
+        line-height: 36px;
+        padding: 20px 0;
+        .inpt1 {
+            @include dflex();
+            justify-content: space-between;
+            column-gap: 10px;
+        }
+        .inpt5{
+            .inpts{
+                @include dflex();
+                column-gap: 30px;
+            }
+        }
+    }
+}
